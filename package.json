@@ -1,29 +1,15 @@
 {
-  "name": "dashboard-data",
+  "name": "electron-react-starter",
   "version": "0.1.0",
   "description": "",
   "main": "main.js",
   "scripts": {
-    "start": "set NODE_ENV=development&&electron main.js",
-    "start-unix" : "NODE_ENV=development&&electron main.js",
+    "start": "cross-env NODE_ENV=development&&electron main.js",
     "build-static": "webpack --config webpack.config.prod.js -p"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/electron/electron-quick-start.git"
-  },
   "keywords": [
-    "Electron",
-    "quick",
-    "start",
-    "tutorial"
   ],
   "author": "GitHub",
-  "license": "CC0-1.0",
-  "bugs": {
-    "url": "https://github.com/electron/electron-quick-start/issues"
-  },
-  "homepage": "https://github.com/electron/electron-quick-start#readme",
   "devDependencies": {
     "electron-prebuilt": "^1.0.1",
     "babel-core": "6.8.0",
