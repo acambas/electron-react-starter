@@ -1,24 +1,38 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Hello World!</title>
-  </head>
-  <body>
-    <!-- All of the Node.js APIs are available in this renderer process. -->
-    <!--We are using node <script>document.write(process.versions.node)</script>,
-    Chromium <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.-->
-    <div id="app">
-      
-    </div>
-  </body>
 
+<head>
+  <meta charset="UTF-8">
+  <title>Hello World!</title>
   <script>
     (function() {
-        const script = document.createElement('script');
-        script.src = (process.env.NODE_ENV === 'development') ? 'http://localhost:1616/assets/bundle.js' : './assets/bundle.js';
-        document.write(script.outerHTML);
-      }());
+      var head  = document.getElementsByTagName('head')[0];
+      var link  = document.createElement('link');
+      link.rel  = 'stylesheet';
+      link.type = 'text/css';
+      link.media = 'all';
+      link.href = (process.env.NODE_ENV === 'development') ? 'http://localhost:1616/assets/styles.css' : './assets/styles.css';
+      head.appendChild(link);
+    }());
   </script>
+</head>
+
+<body>
+  <!-- All of the Node.js APIs are available in this renderer process. -->
+  <!--We are using node <script>document.write(process.versions.node)</script>,
+    Chromium <script>document.write(process.versions.chrome)</script>,
+    and Electron <script>document.write(process.versions.electron)</script>.-->
+  <div id="app">
+
+  </div>
+</body>
+
+<script>
+  (function() {
+    const script = document.createElement('script');
+    script.src = (process.env.NODE_ENV === 'development') ? 'http://localhost:1616/assets/bundle.js' : './assets/bundle.js';
+    document.write(script.outerHTML);
+  }());
+</script>
+
 </html>
