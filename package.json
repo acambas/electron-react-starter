@@ -6,7 +6,7 @@
   "scripts": {
     "start": "set NODE_ENV=development&&electron main.js",
     "start-unix" : "NODE_ENV=development&&electron main.js",
-    "build-static": "webpack --config webpack/webpack.config.prod.js -p"
+    "build-static": "webpack --config webpack.config.prod.js -p"
   },
   "repository": {
     "type": "git",

@@ -8,7 +8,7 @@ module.exports = {
             path.join(__dirname, '/app/client/app.js')]
 	},
 	output: {
-		path: path.join(__dirname, '/app/public/assets'),
+		path: path.join(__dirname, '/app/static/assets'),
 		publicPath: '/assets/',
 		filename: '[name].js'
 	},
@@ -30,7 +30,7 @@ module.exports = {
 			{
 				test: /\.js$/,
 				loader: 'babel-loader',
-				include: path.join(__dirname, 'client'),
+				include: path.join(__dirname, 'app/client'),
 				query: {
 					presets: ["react", "es2015"]
 				}
