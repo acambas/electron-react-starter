@@ -17,6 +17,9 @@ module.exports = {
 		new webpack.HotModuleReplacementPlugin(),
 		new webpack.NoErrorsPlugin(),
 		new ExtractTextPlugin('styles.css'),
+		new webpack.DefinePlugin({
+			'process.env.NODE_ENV': JSON.stringify('development')
+		})
 	],
 	devtool: 'source-map',
 	module: {

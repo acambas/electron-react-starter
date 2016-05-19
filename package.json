@@ -5,7 +5,7 @@
   "main": "main.js",
   "license": "",
   "scripts": {
-    "start": "cross-env NODE_ENV=development&&electron main.js",
+    "start": "set NODE_ENV=development&&electron main.js",
     "build-static": "webpack --config webpack.config.prod.js -p"
   },
   "keywords": [

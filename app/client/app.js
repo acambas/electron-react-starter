@@ -1,11 +1,17 @@
 import React from 'react';
 import {render} from 'react-dom';
 import MainPage from './containers/mainPage';
-var test = window.require('../system/test');
+import {Provider} from 'react-redux';
+import createReduxStore from './redux';
 
+const test = window.require('../system/test');
 test();
 
-render(<MainPage />, document.getElementById('app'));
+const store = createReduxStore();
+
+render(
+    <Provider store={store}>
+        <MainPage />
+    </Provider>
+    , document.getElementById('app'));
 console.log('neki test');
-
-
