@@ -6,9 +6,9 @@
   <title>Hello World!</title>
   <script>
     (function() {
-      var head  = document.getElementsByTagName('head')[0];
-      var link  = document.createElement('link');
-      link.rel  = 'stylesheet';
+      var head = document.getElementsByTagName('head')[0];
+      var link = document.createElement('link');
+      link.rel = 'stylesheet';
       link.type = 'text/css';
       link.media = 'all';
       link.href = (process.env.NODE_ENV === 'development') ? 'http://localhost:1616/assets/styles.css' : './assets/styles.css';
@@ -26,6 +26,8 @@
 
   </div>
 </body>
+<script src="../electron/menuItems.js"> </script>
+
 
 <script>
   (function() {
