@@ -41,11 +41,6 @@ module.exports = {
 				exclude: /\node_modules/,
 				loader: ExtractTextPlugin.extract("style-loader", "css-loader")
 			},
-			{
-				test: /\.scss$/,
-				exclude: /\node_modules/,
-				loader: ExtractTextPlugin.extract("style-loader", "css-loader!sass-loader")
-			},
 			{ test: /\.(png|jpg|ttf|woff2|svg|woff)/, loader: 'url-loader?limit=1000' },
 			{ test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: "file-loader" },
 		]
