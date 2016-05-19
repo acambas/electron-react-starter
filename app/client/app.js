@@ -14,4 +14,3 @@ render(
         <MainPage />
     </Provider>
     , document.getElementById('app'));
-console.log('neki test');

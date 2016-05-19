@@ -1,7 +1,9 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import 'font-awesome/css/font-awesome.css';
+import './style.css';
 import React from 'react';
 import DevTools from '../../redux/DevTools';
+import Counter from '../counter'
 
 const devToolsRender = () => {
 	if(process.env.NODE_ENV === 'development'){
@@ -10,11 +12,15 @@ const devToolsRender = () => {
 }
 
 class component extends React.Component {
+    constructor(props){
+        super(props)
+    }
     render() {
-        return <div className="container">
+        return <div id="mainPage" className="container">
             {devToolsRender()}
-
-           hello world
+           <h1>Electron React Redux app packed with webpack</h1>
+           <Counter />
+           
         </div>
     }
 }
